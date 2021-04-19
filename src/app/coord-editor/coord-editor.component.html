@@ -1,0 +1,44 @@
+<form [formGroup]="coordForm" (change)="updateType(getPoints())">
+
+  <div formGroupName="pointA" >
+    <mat-form-field style="margin-right: 10px">
+      <mat-label>X</mat-label>
+      <input matInput type="number" formControlName="X">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Y</mat-label>
+      <input matInput type="number" formControlName="Y">
+    </mat-form-field>
+  </div>
+
+
+  <div formGroupName="pointB">
+    <mat-form-field style="margin-right: 10px">
+      <mat-label>X</mat-label>
+      <input matInput type="number" formControlName="X">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Y</mat-label>
+      <input matInput type="number" formControlName="Y">
+    </mat-form-field>
+  </div>
+
+
+  <div formGroupName="pointC">
+    <mat-form-field style="margin-right: 10px">
+      <mat-label>X</mat-label>
+      <input matInput type="number" formControlName="X">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Y</mat-label>
+      <input matInput type="number" formControlName="Y">
+    </mat-form-field>
+  </div>
+</form>
+
+<mat-divider></mat-divider>
+
+<p>This is {{ coordForm.getRawValue().type }} triangle</p>
