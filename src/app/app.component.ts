@@ -13,10 +13,6 @@ export class AppComponent implements AfterViewInit {
   @ViewChild(CoordSystemComponent) canvas;
   @ViewChild(CoordEditorComponent) form;
 
-  private context = CanvasRenderingContext2D;
-
-  public triangle = "";
-
 
   constructor() {}
 
@@ -29,6 +25,11 @@ export class AppComponent implements AfterViewInit {
   public update() {
     this.canvas.setPoints(this.form.getPoints());
   }
+
+  public resize() {
+    this.canvas.updateBoard();
+  }
+
 
   ngAfterViewInit() {
     let init = [[2, 2], [10, 3], [3, 8]];
